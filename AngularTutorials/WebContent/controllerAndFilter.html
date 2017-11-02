@@ -1,46 +1,35 @@
 <html>
 <head>
-<script src="js/angular.min.js"></script>
-<script src="js/custom.js"></script>
-<title>
-Angular Controller
-</title>
+<title>Angular Form validations</title>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 </head>
-<body>
-<h2>This is Angular Controller Sample.</h2>
-<div ng-app="firstModule">
-<div ng-controller="firstController">
-{{message}}
-</div>
 
+<body ng-app="firstModule" ng-controller="dataController">
 
-<input type="text" ng-model="searchCriteria"/>
-<input type = "text" ng-model="search.fName"/>
-<div ng-controller="dataController">
-<table border=1>
-<thead>
-<tr>
-<th>
-Name
-</th>
-<th>
-Salary
-</th>
-</tr>
-</thead>
-<tbody>
-<tr ng-repeat="employee in listOfEmployees | filter : search | filter : searchCriteria | orderBy : '-fName'">
-<td>{{employee.fName | uppercase }}</td>
-<td>{{employee.sal | currency:'$'}}</td>
-</tr>
-</tbody>
+Search in Name:<input type="text" ng-model="search.name"/>
 
-</table>
-
-</div>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Sr No.</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Age</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="employee in listOfEmployees | orderBy:'surName' | filter: search">
+				<tr>
+					<td>{{employee.no}} </td>
+					<td>{{employee.name  | uppercase}} </td>
+					<td>{{employee.surName | uppercase}} </td>
+					<td>{{employee.age}}</td>
+					<td>{{employee.salary}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
-
-
-
-</div>
 </html>

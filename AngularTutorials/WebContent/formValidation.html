@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Angular Form validations</title>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body ng-app="firstModule" ng-controller="formController">
+	<div>
+		<form name="myForm">
+			<table>
+				<tbody>
+					<tr>
+						<td>Sr No.</td>
+						<td><input type="text" ng-model="no" name="no" required>
+							<span style="color: red"> 
+								<span	ng-show="myForm.no.$error.required"> number required!! </span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td><input type="text" ng-model="name" name="name" required	ng-minlength="5" ng-maxlength="10"> 
+							<span style="color: red"> 
+								<span ng-show="myForm.name.$error.required"> name required!! </span> 
+								<span ng-show="myForm.name.$error.minlength"> too short!! </span> 
+								<span ng-show="myForm.name.$error.maxlength"> too big!! </span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Surname</td>
+						<td>
+							<input type="text" ng-model="surname" name="surname" required ng-minlength="5"> 
+							<span style="color: red">
+								<span ng-show="myForm.surname.$error.required"> 
+									surname required!! 
+								</span> 
+								<span ng-show="myForm.surname.$error.minlength">
+									too short!! 
+								</span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>Age</td>
+						<td><input type="text" ng-model="age" name="age" required > <span style="color: red"> <span
+								ng-show="myForm.age.$error.required"> age required!! </span> <span
+								ng-show="myForm.age.$error.minlength"> too short!! </span></span></td>
+					</tr>
+					<tr>
+						<td>Salary</td>
+						<td><input type="text" ng-model="salary" name="salary" required ng-minlength="5"> <span style="color: red">
+								<span ng-show="myForm.salary.$error.required"> 
+									salary required!! 
+								</span> 
+								<span ng-show="myForm.salary.$error.minlength">
+									too short!! 
+								</span>
+						</span>
+						</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<button ng-model="submit" ng-disabled="myForm.no.$invalid || myForm.name.$invalid || myForm.surname.$invalid || myForm.age.$invalid || myForm.salary.$invalid " ng-click="submit()">submit</button>
+					</td>
+					<td>
+					<button ng-model="reset" ng-click="reset()">reset</button>
+					</td>
+					
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+	</div>
+</body>
+</html>
