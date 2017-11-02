@@ -82,8 +82,8 @@ app.factory("MathService", function() {
 	factory.multiply = function(a, b) {
 		return a * b;
 	}
-	factory.substract = function(a, b) {
-		return a - b;
+	factory.cube = function(a, b, c) {
+		return a * b * c; 
 	}
 	return factory;
 
@@ -93,15 +93,15 @@ app.service('CalcService', function(MathService) {
 	this.square = function(a) {
 		return MathService.multiply(a, a);
 	};
-	this.substract = function(a) {
-		return MathService.substract(a, a);
+	this.cube = function(a) {
+		return MathService.cube(a, a, a);
 	}
 
 });
 
 app.controller('calcController', function($scope, CalcService) {
-	$scope.substract = function() {
-		$scope.result = CalcService.substract($scope.number);
+	$scope.cube = function() {
+		$scope.result = CalcService.cube($scope.number);
 	};
 	$scope.square = function() {
 		$scope.result = CalcService.square($scope.number);
