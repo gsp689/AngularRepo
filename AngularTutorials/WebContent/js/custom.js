@@ -57,7 +57,7 @@ app.controller("jsonController", function($scope, $http){
 	});
 });
 
-//congigure app for routeProvider
+//configure app for routeProvider
 app.config(['$routeProvider',function($routeProvider) {
     $routeProvider
     .when("/", {
