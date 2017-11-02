@@ -1,4 +1,4 @@
-var app = angular.module("firstModule", []);
+var app = angular.module("firstModule", ['ngRoute']);
 app.controller("firstController", function($scope) {
 	$scope.message = "Hi, Guys!!!!";
 });
@@ -56,3 +56,32 @@ app.controller("jsonController", function($scope, $http){
 		$scope.employees=response;
 	});
 });
+
+//congigure app for routeProvider
+app.config(['$routeProvider',function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "index.html"
+    })
+    .when("/controllerAndFilter", {
+        templateUrl : "controllerAndFilter.html",
+        controller : 'dataController'
+    })
+    .when("/directives", {
+        templateUrl : "directives.html"
+    })
+    .when("/expressions", {
+        templateUrl : "expressions.html"
+    })
+    .when("/formValidation", {
+        templateUrl : "formValidation.html",
+        controller : 'formController'
+    })
+    .when("/ajax", {
+        templateUrl : "ajax.html",
+        controller : 'jsonController'
+    });
+}]);
+
+
+
