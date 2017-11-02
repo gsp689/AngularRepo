@@ -1,4 +1,4 @@
-var app = angular.module("firstModule", ['ngRoute']);
+var app = angular.module("firstModule", [ 'ngRoute' ]);
 app.controller("firstController", function($scope) {
 	$scope.message = "Hi, Guys!!!!";
 });
@@ -38,50 +38,72 @@ app.controller("dataController", function($scope) {
 
 });
 
-app.controller("formController",function($scope){
+app.controller("formController", function($scope) {
 	$scope.reset = function() {
-		$scope.no="";
-		$scope.name="";
-		$scope.surname="";
-		$scope.age="";
-		$scope.salary="";
-		
+		$scope.no = "";
+		$scope.name = "";
+		$scope.surname = "";
+		$scope.age = "";
+		$scope.salary = "";
+
 	}
 });
 
-
-app.controller("jsonController", function($scope, $http){
+app.controller("jsonController", function($scope, $http) {
 	var url = "data/records.json";
-	$http.get(url).success(function (response){
-		$scope.employees=response;
+	$http.get(url).success(function(response) {
+		$scope.employees = response;
 	});
 });
 
 //configure app for routeProvider
-app.config(['$routeProvider',function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "index.html"
-    })
-    .when("/controllerAndFilter", {
-        templateUrl : "controllerAndFilter.html",
-        controller : 'dataController'
-    })
-    .when("/directives", {
-        templateUrl : "directives.html"
-    })
-    .when("/expressions", {
-        templateUrl : "expressions.html"
-    })
-    .when("/formValidation", {
-        templateUrl : "formValidation.html",
-        controller : 'formController'
-    })
-    .when("/ajax", {
-        templateUrl : "ajax.html",
-        controller : 'jsonController'
-    });
-}]);
+app.config([ '$routeProvider', function($routeProvider) {
+	$routeProvider.when("/", {
+		templateUrl : "index.html"
+	}).when("/controllerAndFilter", {
+		templateUrl : "controllerAndFilter.html",
+		controller : 'dataController'
+	}).when("/directives", {
+		templateUrl : "directives.html"
+	}).when("/expressions", {
+		templateUrl : "expressions.html"
+	}).when("/formValidation", {
+		templateUrl : "formValidation.html",
+		controller : 'formController'
+	}).when("/ajax", {
+		templateUrl : "ajax.html",
+		controller : 'jsonController'
+	});
+} ]);
 
+app.factory("MathService", function() {
+	var factory = {};
 
+	factory.multiply = function(a, b) {
+		return a * b;
+	}
+	factory.substract = function(a, b) {
+		return a - b;
+	}
+	return factory;
 
+})
+
+app.service('CalcService', function(MathService) {
+	this.square = function(a) {
+		return MathService.multiply(a, a);
+	};
+	this.substract = function(a) {
+		return MathService.substract(a, a);
+	}
+
+});
+
+app.controller('calcController', function($scope, CalcService) {
+	$scope.substract = function() {
+		$scope.result = CalcService.substract($scope.number);
+	};
+	$scope.square = function() {
+		$scope.result = CalcService.square($scope.number);
+	};
+});
