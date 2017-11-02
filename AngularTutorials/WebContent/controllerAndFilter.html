@@ -8,9 +8,11 @@
 <body ng-app="firstModule" ng-controller="dataController">
 
 Search in Name:<input type="text" ng-model="search.name"/>
+<br>
+Search in Table:<input type="text" ng-model="searchCriteria"/>
 
 	<div>
-		<table>
+		<table border="2px">
 			<thead>
 				<tr>
 					<th>Sr No.</th>
@@ -20,7 +22,7 @@ Search in Name:<input type="text" ng-model="search.name"/>
 					<th>Salary</th>
 				</tr>
 			</thead>
-			<tbody ng-repeat="employee in listOfEmployees | orderBy:'surName' | filter: search">
+			<tbody ng-repeat="employee in listOfEmployees | orderBy:'surName' | filter: search |  filter: searchCriteria">
 				<tr>
 					<td>{{employee.no}} </td>
 					<td>{{employee.name  | uppercase}} </td>

@@ -4,14 +4,28 @@
 <script type="text/javascript" src="js/angular.js"></script>
 <script type="text/javascript" src="js/angular-route.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+</style>
 </head>
 <body ng-app="firstModule">
 <h2>You can Navigate all Assignments from following Views!! Thanks to ng-view!!</h2>
-<a href="#controllerAndFilter">controllerAndFilter</a><br>
-<a href="#directives">directives</a><br>
-<a href="#expressions">expressions</a><br>
-<a href="#formValidation">formValidation</a><br>
-<a href="#ajax">ajax</a>
+<a href="#controllerAndFilter" class="button">controllerAndFilter</a>
+<a href="#directives" class="button">directives</a>
+<a href="#expressions" class="button">expressions</a>
+<a href="#formValidation" class="button">formValidation</a>
+<a href="#ajax" class="button">ajax</a>
+<hr />
 
 <div ng-view></div>
 
