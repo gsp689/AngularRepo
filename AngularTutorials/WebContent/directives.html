@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="js/angular.min.js"></script>
+<title>Angular Directives</title>
+</head>
+<body>
+	<h2>This is Angular Directive Sample.</h2>
+	<div ng-app="">
+		<table border=2px>
+			<tr>
+				<td><input type="checkbox" ng-model="enableDisable">click
+					to Enable/Disable</input></td>
+				<td><input type="textbox" ng-disabled="enableDisable"
+					ng-model="name1"></input></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" ng-model="showHide">click
+					to show/hide</input></td>
+				<td><input type="textbox" ng-show="showHide"></input></td>
+			</tr>
+			<tr>
+				<td>{{count}}</td>
+				<td><button ng-click="count = count + 1">click</button></td>
+			</tr>
+			{{name1}} you clicked {{count}} times
+		</table>
+	</div>
+</body>
+</html>

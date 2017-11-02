@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="js/angular.min.js"></script>
+<title>
+Angular Expressions
+</title>
+</head>
+<body>
+<h2>This is Angular Expressions Sample.</h2>
+<div ng-app="">
+
+<table>
+<tr>
+<td>name:</td>
+<td><input type="textbox"  ng-model="name"></input></td>
+</tr>
+<tr>
+<td>surname</td>
+<td><input type="textbox" ng-model="surname"></input></td>
+</tr>
+<tr>
+<td>qty</td>
+<td><input type="textbox" ng-model="qty"></input></td>
+</tr>
+<tr>
+<td>cost</td>
+<td><input type="textbox" ng-model="cost"></input></td>
+</tr>
+<tr><td>
+<button ng-click="message = name +' '+ surname + ' you have to pay ' + cost*qty" >click</button></td>
+</tr>
+<tr>
+<td><div ng-bind="message"></div></td>
+</tr>
+</table>
+
+</div>
+</body>
+
+
+
+</html>

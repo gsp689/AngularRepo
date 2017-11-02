@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="js/angular.min.js"></script>
+<script src="js/custom.js"></script>
+<title>
+Angular Controller
+</title>
+</head>
+<body>
+<h2>This is Angular Controller Sample.</h2>
+<div ng-app="firstModule">
+<div ng-controller="firstController">
+{{message}}
+</div>
+
+
+<input type="text" ng-model="searchCriteria"/>
+<input type = "text" ng-model="search.fName"/>
+<div ng-controller="dataController">
+<table border=1>
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="employee in listOfEmployees | filter : search | filter : searchCriteria | orderBy : '-fName'">
+<td>{{employee.fName | uppercase }}</td>
+<td>{{employee.sal | currency:'$'}}</td>
+</tr>
+</tbody>
+
+</table>
+
+</div>
+</body>
+
+
+
+</div>
+</html>
