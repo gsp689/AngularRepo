@@ -47,6 +47,12 @@ app.controller("formController",function($scope){
 		$scope.salary="";
 		
 	}
-	
-	
+});
+
+
+app.controller("jsonController", function($scope, $http){
+	var url = "data/records.json";
+	$http.get(url).success(function (response){
+		$scope.employees=response;
+	});
 });
