@@ -5,14 +5,30 @@
 <title>PLural Sight Scopes</title>
 <script>
 
-function myFunction() {
+var myFunction = function () {
 	
-	var local = true;
+	 local = true;
+console.log(local);
 	
 }
 
-console.log(local);
+myFunction();
 
+
+var outerFunction = function() {
+	var outerA = '1';
+	var innerFunction = function() {
+		var innerA = 'innervariable';
+		console.log("inner function");
+		console.log(outerA);
+		return "hello";
+		
+	}
+	return innerFunction;
+	
+}
+console.log(outerFunction()());
+outerFunction()();
 
 </script>
 

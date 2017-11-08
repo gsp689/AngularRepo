@@ -26,18 +26,19 @@ console.log(box["0"]);
 
 //this will work
 console.log("----------");
-console.log(box[key]); //500
+console.log(box[key]); //undefined
 var key = "weight";
 
-
-//this wont work if var func defined after consoel.log statement... why??
+console.log("----------");
+/*  console.log(box[func()]);  */   //won't work
+//this wont work if var func defined after console.log statement... why??  not hoisting
 var func = function() {
 	return "material";
 }
 console.log("----------");
 console.log(box[func1()]);  //"titanium"
 
-function func1() {
+function func1() {   //this will hoist on top
 	return "material";
 }
 
