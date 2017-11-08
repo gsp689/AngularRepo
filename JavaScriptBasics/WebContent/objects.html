@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Plyural Sight Tutorials - Objects</title>
+<script>
+
+var box = {weight : 500, color : "yellow", "0" : "hello"};
+
+box.material = "cardboard";
+console.log(box.material);   //"cardboard"
+
+var cb = box.material;
+console.log(cb);  //"cardborad"
+
+box.material = "titanium";
+console.log(cb); //"cardboard"
+console.log(box.size);  //undefined
+
+box["color"] = "green";
+console.log(box.color); //"green"
+console.log(box["color"]);  //"green"
+
+
+console.log(box["0"]);
+
+//this will work
+console.log("----------");
+console.log(box[key]); //500
+var key = "weight";
+
+
+//this wont work if var func defined after consoel.log statement... why??
+var func = function() {
+	return "material";
+}
+console.log("----------");
+console.log(box[func1()]);  //"titanium"
+
+function func1() {
+	return "material";
+}
+
+var myArray = [1,2,3];
+myArray[0]=5;
+
+console.log(myArray);
+
+console.log(myArray[0]);
+
+
+ 
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
