@@ -4,32 +4,53 @@
 <meta charset="ISO-8859-1">
 <title>PLural Sight Scopes</title>
 <script>
+	/* var myFunction = function() {
 
-var myFunction = function () {
+		local = true;
+		console.log(local);
+
+	}
+ */
+	//myFunction();
+
+	var outerFunction = function (){
+		this.outerA = "3"
+		}
+		
+	//outerFunction.prototype.outerA = "4";
 	
-	 local = true;
-console.log(local);
+	var p = new outerFunction();
 	
-}
-
-myFunction();
-
-
-var outerFunction = function() {
-	var outerA = '1';
-	var innerFunction = function() {
-		var innerA = 'innervariable';
-		console.log("inner function");
-		console.log(outerA);
-		return "hello";
+	
+	//console.log(p.outerA);
+	//outerFunction().innerFunction();
+	
+	
+	
+	function myFunction(who){
+		this.me = who;
 		
 	}
-	return innerFunction;
 	
-}
-console.log(outerFunction()());
-outerFunction()();
-
+	myFunction.prototype.identify = function(){
+		console.log("Hi" +this.me);
+	}
+	
+	var a = new myFunction(" gp");
+	a.identify();
+	console.log("---------------");
+	a.identify = function(){
+		this.me=" else"
+		myFunction.prototype.identify.call(this);
+	}
+	
+	a.identify();
+	
+	console.log("---------------");
+	Object.getPrototypeOf(a).identify.call(a);
+	
+	
+	
 </script>
 
 </head>
