@@ -14,17 +14,7 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<title>HarrisonHighSchool</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<link rel="stylesheet" media="all" href="css/style.css">
-<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<%
+<%
  InputStream stream = application.getResourceAsStream("resources.properties");
  Properties props = new Properties();
  props.load(stream);
@@ -41,29 +31,21 @@
  String newsArray = props.getProperty("newsArray");
  JSONArray newsJsonObject = new JSONArray(newsArray);
  JSONObject obj = (JSONObject)newsJsonObject.get(0);
+ application.setAttribute("schoolName", schoolName);
  
 %>
-	<header id="header">
-	<div class="container">
-		<a href="index.jsp" id="logo" title="<%out.println(schoolName); %>"><%out.println(schoolName); %></a>
-		<div class="menu-trigger"></div>
-		<nav id="menu">
-		<ul>
-			<li><a href="events.jsp">About Us</a></li>
-			<li><a href="events.jsp">Infrastructure</a></li>
-			<li><a href="events.jsp">Academics</a></li>
-			
-		</ul>
-		<ul>
-			<li><a href="gallery.jsp">Admission</a></li>
-			<li><a href="gallery.jsp">Facilities</a></li>
-			<li><a href="#fancy" class="get-contact">Contact Us</a></li>
-		</ul>
-		</nav>
-		<!-- / navigation -->
-	</div>
-	<!-- / container --> </header>
-	<!-- / header -->
+<meta charset="utf-8">
+<title><%out.println(schoolName); %></title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" media="all" href="css/style.css">
+<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="slider">
 		<ul class="bxslider">

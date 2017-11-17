@@ -14,67 +14,46 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<a href="index.jsp" id="logo" title="HarrisonHighSchool">HarrisonHighSchool</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="events.jsp">Courses</a></li>
-					<li><a href="gallery.jsp">Students</a></li>
-					<li><a href="events.jsp">Events</a></li>
- 				</ul>
-				<ul>
-					<li><a href="gallery.jsp">Teachers</a></li>
-					<li class="current"><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-	
-	</header>
-	<!-- / header -->
+	<jsp:include page="header.jsp"></jsp:include>
 	<div class="slider">
 		<ul class="bxslider">
-			<li>
+			<li class="slideImage1"> 
 				<div class="container">
 					<div class="info">
 						<h2>
 							It’s Time to <br>
 							<span>Get back to school</span>
 						</h2>
-						<a href="#">Check out our new programs</a>
+						<!-- <a href="#">Check out our new programs</a> -->
 					</div>
 				</div> <!-- / content -->
 			</li>
-			<li>
+			<li class="slideImage2">
 				<div class="container">
 					<div class="info">
 						<h2>
 							It’s Time to <br>
 							<span>Get back to school</span>
 						</h2>
-						<a href="#">Check out our new programs</a>
+						<!-- <a href="#">Check out our new programs</a> -->
 					</div>
 				</div> <!-- / content -->
 			</li>
-			<li>
+			<li class="slideImage3">
 				<div class="container">
 					<div class="info">
 						<h2>
 							It’s Time to <br>
 							<span>Get back to school</span>
 						</h2>
-						<a href="#">Check out our new programs</a>
+						<!-- <a href="#">Check out our new programs</a> -->
 					</div>
 				</div> <!-- / content -->
 			</li>
 		</ul>
 		<div class="bg-bottom"></div>
 	</div>
-	<div class="divider"></div>
+	<!-- <div class="divider"></div> -->
 	
 	<div class="content">
 		<div class="container">
@@ -153,19 +132,7 @@
 				</div>
 			</div>
 			
-			<aside id="sidebar">
-				<div class="widget sidemenu">
-					<ul>
-						<li><a href="#">Day of teacher<span class="nr">142</span></a></li>
-						<li><a href="#">Student olympics<span class="nr">98</span></a></li>
-						<li class="current"><a href="#">The best students in 2014<span class="nr">16</span></a></li>
-						<li><a href="#">Halloween party<span class="nr">63</span></a></li>
-						<li><a href="#">School party<span class="nr">49</span></a></li>
-						<li><a href="#">Miss of university<span class="nr">175</span></a></li>
-						<li><a href="#">Karaoke party<span class="nr">87</span></a></li>
-					</ul>
-				</div>
-			</aside>
+			<jsp:include page="sideBar.jsp"></jsp:include>
 			<!-- / sidebar -->
 	
 		</div>

@@ -14,28 +14,7 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<a href="index.jsp" id="logo" title="HarrisonHighSchool">HarrisonHighSchool</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="events.jsp">Courses</a></li>
-					<li><a href="gallery.jsp">Students</a></li>
-					<li class="current"><a href="events.jsp">Events</a></li>
- 				</ul>
-				<ul>
-					<li><a href="gallery.jsp">Teachers</a></li>
-					<li><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-	
-	</header>
-	<!-- / header -->
+<jsp:include page="header.jsp"></jsp:include>
 	
 	<div class="divider"></div>
 	
