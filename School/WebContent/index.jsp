@@ -30,7 +30,6 @@
  String news2Info = props.getProperty("news2Info");
  String newsArray = props.getProperty("newsArray");
  JSONArray newsJsonObject = new JSONArray(newsArray);
- JSONObject obj = (JSONObject)newsJsonObject.get(0);
  application.setAttribute("schoolName", schoolName);
  
 %>

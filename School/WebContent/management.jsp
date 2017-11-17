@@ -57,7 +57,7 @@
 	
 	<div class="content">
 		<div class="container">
-			<h1 class="single">PHOTO GALLERY</h1>
+			<h1 class="single">Governing Counsel </h1>
 
 			<div class="main-content">
 				<div class="slider-con">

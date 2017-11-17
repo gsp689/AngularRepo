@@ -10,14 +10,14 @@
 <aside id="sidebar">
 				<div class="widget sidemenu">
 					<ul>
-						<li><a href="#">Management Comittee</a></li>
+						<li><a href="management.jsp">Management Comittee</a></li>
 						<li><a href="#">STAFF MEMBERS</a></li>
 						<li><a href="#">The best students in 2014</a></li>
 						<li><a href="#">ACTIVITIES</a></li>
 						<li><a href="#">CURRICULUM</a></li>
 						<li><a href="#">OUR SPECIALITIES</a></li>
 						<li><a href="#">OUR SCHOOL ACHIEVERS</a></li>
-						<li><a href="#">PHOTO GALLERY</a></li>
+						<li><a href="gallery.jsp">PHOTO GALLERY</a></li>
 						<li><a href="#">PARENTS CORNER</a></li>
 						<li><a href="#">TIME TABLE</a></li>
 						
