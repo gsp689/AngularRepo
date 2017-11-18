@@ -197,7 +197,7 @@
 		<jsp:include page="footer.jsp"></jsp:include>
 	<!-- / footer -->
 
-	<!-- <div id="fancy">
+	<div id="fancy">
 		<h2>Request information</h2>
 		<form action="#">
 			<div class="left">
@@ -222,7 +222,7 @@
 				<button class="btn blue" type="submit">Send request</button>
 			</div>
 		</form>
-	</div> -->
+	</div> 
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>

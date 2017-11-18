@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 .justify{
 	text-align: justify;
+	font-size: smaller;
+	line-height: normal;
 }
 img {
 	vertical-align: middle;

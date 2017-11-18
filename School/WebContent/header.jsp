@@ -7,12 +7,12 @@
 		<ul>
 			<li><a href="aboutUs.jsp">About Us</a></li>
 			<li><a href="infra.jsp">Infrastructure</a></li>
-			<li><a href="events.jsp">Academics</a></li>
+			<li><a href="academics.jsp">Academics</a></li>
 			
 		</ul>
 		<ul>
-			<li><a href="gallery.jsp">Admission</a></li>
-			<li><a href="gallery.jsp">Facilities</a></li>
+			<li><a href="admission.jsp">Admission</a></li>
+			<li><a href="facilities.jsp">Facilities</a></li>
 			<li><a href="#fancy" class="get-contact">Contact Us</a></li>
 		</ul>
 		</nav>
