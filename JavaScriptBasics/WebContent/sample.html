@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var box = {};
+
+	box.material = "cardBoard";
+
+	var key = "material";
+	console.log(box[key]);
+	var func = function() {
+		return "material";
+	}
+	console.log(box[func()]);
+	
+	
+	func.size1="hello";
+	console.log('-----------');
+	console.log(func);
+	
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

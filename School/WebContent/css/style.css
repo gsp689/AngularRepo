@@ -645,16 +645,6 @@ h1.single{
 	height: 600px;
 }
 
-.slider .bxslider .slideImage1 {
-	background: url(../images/pic_slide.jpg) no-repeat 50% 50%;
-}
-.slider .bxslider .slideImage2 {
-	background: url(../images/pic_slide.jpg) no-repeat 50% 50%;
-}
-.slider .bxslider .slideImage3 {
-	background: url(../images/pic_slide.jpg) no-repeat 50% 50%;
-}
-
 .slider .info {
 	float: right;
 	padding: 122px 15px 0 0;

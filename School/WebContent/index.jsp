@@ -22,15 +22,12 @@
  String aboutUsSectionOnHomePage = props.getProperty("aboutUsSectionOnHomePage");
  String curriculumSectionOnHomePage = props.getProperty("curriculumSectionOnHomePage");
  String activitiesSectionOnHomePage = props.getProperty("activitiesSectionOnHomePage");
- String news1Heading = props.getProperty("news1Heading");
- String news2Heading = props.getProperty("news2Heading");
- String news1Date = props.getProperty("news1Date");
- String news1Info = props.getProperty("news1Info");
- String news2Date = props.getProperty("news2Date");
- String news2Info = props.getProperty("news2Info");
+ 
  String newsArray = props.getProperty("newsArray");
  JSONArray newsJsonObject = new JSONArray(newsArray);
+ 
  application.setAttribute("schoolName", schoolName);
+ 
  
 %>
 <meta charset="utf-8">
@@ -45,45 +42,8 @@
 <body>
 	
 	<jsp:include page="header.jsp"></jsp:include>
-
-	<div class="slider">
-		<ul class="bxslider">
-			<li class="slideImage1"> 
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-			<li class="slideImage2">
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-			<li class="slideImage3">
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-		</ul>
-		<div class="bg-bottom"></div>
-	</div>
+	<jsp:include page="sliders.jsp"></jsp:include>
+	
 
 	<section class="posts">
 	<div class="container">
@@ -164,7 +124,7 @@
 	<div class="container">
 		<h2>Latest news</h2>
 
-		<c:forEach begin="0" end="${newsJsonObject.length()+1}" var="index">
+		<c:forEach begin="0" end="<%=newsJsonObject.length()-1 %>" var="index">
 			<article>
 			<div class="info">
 				<%

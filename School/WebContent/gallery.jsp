@@ -15,44 +15,7 @@
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="slider">
-		<ul class="bxslider">
-			<li class="slideImage1"> 
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-			<li class="slideImage2">
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-			<li class="slideImage3">
-				<div class="container">
-					<div class="info">
-						<h2>
-							It’s Time to <br>
-							<span>Get back to school</span>
-						</h2>
-						<!-- <a href="#">Check out our new programs</a> -->
-					</div>
-				</div> <!-- / content -->
-			</li>
-		</ul>
-		<div class="bg-bottom"></div>
-	</div>
+	<jsp:include page="sliders.jsp"></jsp:include>
 	<!-- <div class="divider"></div> -->
 	
 	<div class="content">
