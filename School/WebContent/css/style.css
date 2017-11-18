@@ -28,7 +28,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+.justify{
+	text-align: justify;
+}
 img {
 	vertical-align: middle;
 }
